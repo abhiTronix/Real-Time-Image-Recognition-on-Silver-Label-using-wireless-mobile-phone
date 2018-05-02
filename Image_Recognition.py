@@ -114,6 +114,7 @@ def GetOCRDetectImage(image):
     start = timeit.default_timer()
 
     boxes = pytesseract.image_to_boxes(image)
+    print(str(boxes).encode("utf8").decode("cp950", "ignore"))
     OCRstring =''
     boxes = (boxes.split()) # string change to list
 
